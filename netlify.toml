@@ -1,28 +1,8 @@
-## Netlify configuration for mobile redirect edge function
-## Publish folder assumes Vite build output lives in dist/
-[build]
-  command = "npm run build"
-  publish = "dist"
-
-[[edge_functions]]
-  function = "device-redirect"
-  path = "/*"
-
-## SPA fallback (desktop)
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
 # Netlify config for Mobile (Expo Web) build
 [build]
-  command = "npm run build:netlify"
+  command = "npx expo export -p web"
   publish = "dist"
-  # Set API/base env vars (VITE_API_BASE, EXPO_PUBLIC_API_URL, MOBILE_WEB_TABLET_POLICY) in Netlify UI.
-
-# Edge function for device redirect (/ -> /m on mobile). File: netlify/edge-functions/device-redirect.js
-[[edge_functions]]
-  function = "device-redirect"
-  path = "/*"
+  # If you need environment vars (e.g. API base): set in Netlify UI, NOT here.
 
 # SPA fallback so client-side routing works
 [[redirects]]
