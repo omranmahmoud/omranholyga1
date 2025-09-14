@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import page animations */
+@import './styles/animations.css';
+
+/* Theme CSS Variables */
+:root {
+  --color-primary: #4F46E5;
+  --color-secondary: #10B981;
+  --color-accent: #F59E0B;
+  --color-text: #1F2937;
+  --color-background: #FFFFFF;
+  --font-family: 'Inter', sans-serif;
+  --border-radius: 8px;
+  --button-radius: 8px;
+  --home-zoom-scale: 0.90; /* desktop homepage zoom-out scale */
+}
+
+/* Theme utility classes */
+.theme-primary {
+  color: var(--color-primary);
+}
+
+.theme-primary-bg {
+  background-color: var(--color-primary);
+}
+
+.theme-secondary {
+  color: var(--color-secondary);
+}
+
+.theme-secondary-bg {
+  background-color: var(--color-secondary);
+}
+
+.theme-accent {
+  color: var(--color-accent);
+}
+
+.theme-accent-bg {
+  background-color: var(--color-accent);
+}
+
+.theme-text {
+  color: var(--color-text);
+}
+
+.theme-text-bg {
+  background-color: var(--color-text);
+}
+
+.theme-background {
+  color: var(--color-background);
+}
+
+.theme-background-bg {
+  background-color: var(--color-background);
+}
+
+.theme-font {
+  font-family: var(--font-family);
+}
+
+.theme-border-radius {
+  border-radius: var(--border-radius);
+}
+
+.theme-button-radius {
+  border-radius: var(--button-radius);
+}
+
+/* Button theme styles */
+.theme-button {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  border-radius: var(--button-radius);
+  transition: all 0.2s ease;
+}
+
+.theme-button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.theme-button-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-background);
+  border-radius: var(--button-radius);
+  transition: all 0.2s ease;
+}
+
+.theme-button-secondary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.theme-button-accent {
+  background-color: var(--color-accent);
+  color: var(--color-background);
+  border-radius: var(--button-radius);
+  transition: all 0.2s ease;
+}
+
+.theme-button-accent:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+/* Homepage zoom-out wrapper */
+.home-zoom {
+  /* create a stacking context so scaled content doesn't overlap header/footer */
+  position: relative;
+}
+.home-zoom-inner {
+  transform-origin: top center;
+}
+/* Apply zoom-out only on >=1024px (Tailwind lg) to keep mobile untouched */
+@media (min-width: 1024px) {
+  .home-zoom-inner {
+  transform: scale(var(--home-zoom-scale));
+  }
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  .ltr-only {
+    display: none;
+  }
+}
+
+[dir="ltr"] {
+  .rtl-only {
+    display: none;
+  }
+}
+
+/* RTL specific styles */
+[dir="rtl"] {
+  .reverse-flex {
+    flex-direction: row-reverse;
+  }
+  
+  .reverse-text {
+    text-align: right;
+  }
+  
+  .transform-flip {
+    transform: scaleX(-1);
+  }
+}

@@ -1,8 +1,12 @@
-# Netlify config for Mobile (Expo Web) build
+## Netlify config: build desktop + mobile web and redirect mobile to /m
 [build]
-  command = "npx expo export -p web"
+  command = "npm run build:netlify"
   publish = "dist"
-  # If you need environment vars (e.g. API base): set in Netlify UI, NOT here.
+  # Environment vars (VITE_API_BASE, EXPO_PUBLIC_API_URL, MOBILE_WEB_TABLET_POLICY) set in Netlify UI.
+
+[[edge_functions]]
+  function = "device-redirect"
+  path = "/*"
 
 # SPA fallback so client-side routing works
 [[redirects]]

@@ -1,0 +1,79 @@
+{
+  "navigation": {
+    "newIn": "وصل حديثاً",
+    "women": "نساء",
+    "men": "رجال",
+    "accessories": "إكسسوارات",
+    "sale": "تخفيضات"
+  },
+  "hero": {
+    "welcome": "مرحباً بكم في إيفا كيرفز",
+    "subtitle": "اكتشفي مجموعتنا الجديدة من الأزياء الفاخرة",
+    "collection": "مجموعة"
+  },
+  "common": {
+    "search": "بحث",
+    "wishlist": "المفضلة",
+    "cart": "سلة التسوق",
+    "error": "خطأ",
+    "errorMessage": "حدث خطأ ما"
+  },
+  "login": {
+    "title": "تسجيل الدخول",
+    "validationTitle": "تحقق",
+    "invalidEmail": "بريد إلكتروني غير صالح",
+    "invalidPassword": "يجب أن تكون كلمة المرور 6 أحرف على الأقل",
+    "success": "نجاح",
+    "welcomeUser": "مرحباً، {{name}}!",
+    "failed": "فشل تسجيل الدخول",
+    "loggingIn": "جارٍ تسجيل الدخول...",
+    "skip": "تخطي الآن",
+    "signupPrompt": "لا تملك حساباً؟ سجل الآن",
+    "continueWithGoogle": "المتابعة مع جوجل",
+    "continueWithFacebook": "المتابعة مع فيسبوك"
+  },
+  "signup": {
+    "title": "إنشاء حساب",
+    "signingUp": "جارٍ إنشاء الحساب...",
+    "welcome": "أهلاً بك!",
+    "success": "تم التسجيل بنجاح",
+    "successLogin": "يمكنك الآن تسجيل الدخول",
+    "nameInvalid": "يجب أن يكون الاسم حرفين على الأقل",
+    "emailInvalid": "بريد إلكتروني غير صالح",
+    "passwordInvalid": "يجب أن تكون كلمة المرور 6 أحرف على الأقل",
+    "accountExists": "لديك حساب بالفعل؟ سجل الدخول",
+    "continueWithFacebook": "المتابعة مع فيسبوك",
+    "continueWithGoogle": "المتابعة مع جوجل"
+  },
+  "footer": {
+    "newsletter": {
+      "title": "انضم إلى نشرتنا الإخبارية",
+      "subtitle": "اشترك للحصول على عروض خاصة وهدايا مجانية وصفقات حصرية.",
+      "placeholder": "أدخل بريدك الإلكتروني",
+      "subscribe": "اشتراك"
+    },
+    "description": "اكتشف الأزياء الفاخرة التي تجمع بين الأناقة الخالدة والأسلوب العصري.",
+    "address": "١٢٣ شارع الأزياء، نيويورك ١٠٠٠١",
+    "phone": "+١ (٥٥٥) ١٢٣-٤٥٦٧",
+    "email": "contact@evacurves.com",
+    "shop": "تسوق",
+    "support": "الدعم",
+    "company": "الشركة",
+    "newArrivals": "وصل حديثاً",
+    "bestSellers": "الأكثر مبيعاً",
+    "sale": "تخفيضات",
+    "collections": "المجموعات",
+    "giftCards": "بطاقات الهدايا",
+    "contactUs": "اتصل بنا",
+    "faqs": "الأسئلة الشائعة",
+    "shipping": "الشحن",
+    "returns": "الإرجاع",
+    "sizeGuide": "دليل المقاسات",
+    "aboutUs": "من نحن",
+    "careers": "الوظائف",
+    "storeLocator": "مواقع المتاجر",
+    "sustainability": "الاستدامة",
+    "press": "الأخبار",
+    "rights": "جميع الحقوق محفوظة."
+  }
+}

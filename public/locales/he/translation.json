@@ -1,0 +1,48 @@
+{
+  "navigation": {
+    "newIn": "חדש",
+    "women": "נשים",
+    "men": "גברים",
+    "accessories": "אקססוריז",
+    "sale": "מבצעים"
+  },
+  "hero": {
+    "welcome": "ברוכים הבאים",
+    "subtitle": "גלו את הקולקציה החדשה שלנו",
+    "collection": "קולקציה"
+  },
+  "common": {
+    "search": "חיפוש",
+    "wishlist": "מועדפים",
+    "cart": "עגלה",
+    "error": "שגיאה",
+    "errorMessage": "אירעה שגיאה"
+  },
+  "login": {
+    "title": "התחברות",
+    "validationTitle": "אימות",
+    "invalidEmail": "אימייל לא תקין",
+    "invalidPassword": "הסיסמה חייבת להיות באורך 6 תווים לפחות",
+    "success": "הצלחה",
+    "welcomeUser": "ברוך הבא, {{name}}!",
+    "failed": "התחברות נכשלה",
+    "loggingIn": "מתחבר...",
+    "skip": "דלג עכשיו",
+    "signupPrompt": "אין לך חשבון? הירשם",
+    "continueWithGoogle": "המשך עם Google",
+    "continueWithFacebook": "המשך עם Facebook"
+  },
+  "signup": {
+    "title": "הרשמה",
+    "signingUp": "נרשם...",
+    "welcome": "ברוך הבא!",
+    "success": "נרשמת בהצלחה",
+    "successLogin": "כעת ניתן להתחבר",
+    "nameInvalid": "שם חייב להכיל לפחות 2 תווים",
+    "emailInvalid": "אימייל לא תקין",
+    "passwordInvalid": "סיסמה חייבת לפחות 6 תווים",
+    "accountExists": "כבר יש לך חשבון? התחבר",
+    "continueWithFacebook": "המשך עם Facebook",
+    "continueWithGoogle": "המשך עם Google"
+  }
+}

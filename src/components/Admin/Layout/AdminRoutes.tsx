@@ -1,0 +1,43 @@
+import { Dashboard } from '../Dashboard';
+import { Products } from '../Products';
+import { Orders } from '../Orders';
+import { AdminSettings } from '../AdminSettings';
+import { Hero } from '../Hero';
+import { FeaturedCollection } from '../FeaturedCollection';
+import { Reviews } from '../Reviews';
+import { Categories } from '../Categories';
+import { NavigationCategories } from '../NavigationCategories';
+import { FooterManagement } from '../Footer/FooterManagement';
+import { DeliveryManagementHub } from '../DeliveryManagement/DeliveryManagementHub';
+import { AnnouncementManager } from '../Announcements/AnnouncementManager';
+import { BackgroundManager } from '../Background/BackgroundManager';
+import { InventoryManager } from '../Inventory/InventoryManager';
+import { GiftCardManager } from '../GiftCards/GiftCardManager';
+import { CouponManager } from '../Coupons/CouponManager';
+import { ShippingManager } from '../Shipping/ShippingManager';
+import { AnalyticsSettings } from '../Analytics/AnalyticsSettings';
+import { DesignHub } from '../Design/DesignHub';
+import { Customers } from '../Customers/Customers';
+
+export const AdminRoutes = [
+  { path: '', component: Dashboard },
+  { path: 'products', component: Products },
+  { path: 'orders', component: Orders },
+  { path: 'customers', component: Customers },
+  { path: 'design', component: DesignHub },
+  { path: 'hero', component: Hero },
+  { path: 'featured', component: FeaturedCollection },
+  { path: 'categories', component: Categories },
+  { path: 'navigation', component: NavigationCategories },
+  { path: 'footer', component: FooterManagement },
+  { path: 'announcements', component: AnnouncementManager },
+  { path: 'background', component: BackgroundManager },
+  { path: 'inventory', component: InventoryManager },
+  { path: 'gift-cards', component: GiftCardManager },
+  { path: 'coupons', component: CouponManager },
+  { path: 'delivery', component: DeliveryManagementHub },
+  { path: 'shipping', component: ShippingManager },
+  { path: 'reviews', component: Reviews },
+  { path: 'analytics', component: AnalyticsSettings },
+  { path: 'settings', component: AdminSettings }
+];

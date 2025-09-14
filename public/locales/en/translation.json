@@ -1,0 +1,79 @@
+{
+  "navigation": {
+    "newIn": "New In",
+    "women": "Women",
+    "men": "Men",
+    "accessories": "Accessories",
+    "sale": "Sale"
+  },
+  "hero": {
+    "welcome": "Welcome to Eva Curves",
+    "subtitle": "Discover our latest collection of premium fashion items.",
+    "collection": "Collection"
+  },
+  "common": {
+    "search": "Search",
+    "wishlist": "Wishlist",
+    "cart": "Shopping Cart",
+    "error": "Error",
+    "errorMessage": "Something went wrong"
+  },
+  "login": {
+    "title": "Login",
+    "validationTitle": "Validation",
+    "invalidEmail": "Invalid email address",
+    "invalidPassword": "Password must be at least 6 characters",
+    "success": "Success",
+    "welcomeUser": "Welcome, {{name}}!",
+    "failed": "Login failed",
+    "loggingIn": "Logging in...",
+    "skip": "Skip for now",
+    "signupPrompt": "Don't have an account? Sign up",
+    "continueWithGoogle": "Continue with Google",
+    "continueWithFacebook": "Continue with Facebook"
+  },
+  "signup": {
+    "title": "Sign Up",
+    "signingUp": "Signing up...",
+    "welcome": "Welcome!",
+    "success": "Registration successful",
+    "successLogin": "You can now login",
+    "nameInvalid": "Name must be at least 2 characters",
+    "emailInvalid": "Invalid email address",
+    "passwordInvalid": "Password must be at least 6 characters",
+    "accountExists": "Already have an account? Login",
+    "continueWithFacebook": "Continue with Facebook",
+    "continueWithGoogle": "Continue with Google"
+  },
+  "footer": {
+    "newsletter": {
+      "title": "Join Our Newsletter",
+      "subtitle": "Subscribe to get special offers, free giveaways, and exclusive deals.",
+      "placeholder": "Enter your email",
+      "subscribe": "Subscribe"
+    },
+    "description": "Discover luxury fashion that combines timeless elegance with modern style.",
+    "address": "123 Fashion Street, NY 10001",
+    "phone": "+1 (555) 123-4567",
+    "email": "contact@evacurves.com",
+    "shop": "Shop",
+    "support": "Support",
+    "company": "Company",
+    "newArrivals": "New Arrivals",
+    "bestSellers": "Best Sellers",
+    "sale": "Sale",
+    "collections": "Collections",
+    "giftCards": "Gift Cards",
+    "contactUs": "Contact Us",
+    "faqs": "FAQs",
+    "shipping": "Shipping",
+    "returns": "Returns",
+    "sizeGuide": "Size Guide",
+    "aboutUs": "About Us",
+    "careers": "Careers",
+    "storeLocator": "Store Locator",
+    "sustainability": "Sustainability",
+    "press": "Press",
+    "rights": "All rights reserved."
+  }
+}
