@@ -294,6 +294,86 @@ export function VisualStoreBuilder() {
       ]
     }
   ];
+          title: 'Featured Products',
+          enabled: true,
+          order: 1,
+          settings: { itemsPerRow: 4, showDescription: true, showPrice: true }
+        },
+        {
+          id: 'categories',
+          type: 'categories',
+          title: 'Shop by Category',
+          enabled: true,
+          order: 2,
+          settings: { displayStyle: 'carousel', itemsPerRow: 6, showNames: true }
+        }
+      ]
+    },
+    {
+      id: 'minimal-shop',
+      name: 'Minimal Shop',
+      description: 'Simple and elegant design with focus on products',
+      preview: '/templates/minimal-shop.jpg',
+      sections: [
+        {
+          id: 'hero',
+          type: 'hero',
+          title: 'Simple Hero',
+          enabled: true,
+          order: 0,
+          settings: { showOverlay: false, textAlignment: 'left' }
+        },
+        {
+          id: 'products',
+          type: 'products',
+          title: 'All Products',
+          enabled: true,
+          order: 1,
+          settings: { itemsPerRow: 3, showFilters: false, sortOptions: true }
+        }
+      ]
+    },
+    {
+      id: 'content-rich',
+      name: 'Content Rich',
+      description: 'Perfect for brands with strong storytelling focus',
+      preview: '/templates/content-rich.jpg',
+      sections: [
+        {
+          id: 'hero',
+          type: 'hero',
+          title: 'Brand Story Hero',
+          enabled: true,
+          order: 0,
+          settings: { showOverlay: true, overlayOpacity: 60, textAlignment: 'center' }
+        },
+        {
+          id: 'text-1',
+          type: 'text',
+          title: 'About Section',
+          enabled: true,
+          order: 1,
+          settings: { backgroundColor: '#F9FAFB', textSize: 'large' }
+        },
+        {
+          id: 'featured',
+          type: 'featured',
+          title: 'Best Sellers',
+          enabled: true,
+          order: 2,
+          settings: { itemsPerRow: 3, showDescription: true, showPrice: true }
+        },
+        {
+          id: 'testimonials',
+          type: 'testimonials',
+          title: 'Customer Reviews',
+          enabled: true,
+          order: 3,
+          settings: { displayStyle: 'carousel', showRatings: true }
+        }
+      ]
+    }
+  ];
 
   const availableComponents = [
     { type: 'hero', title: 'Hero Banner', icon: ImageIcon, description: 'Large banner with call-to-action' },

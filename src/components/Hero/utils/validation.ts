@@ -1,4 +1,4 @@
-import type { Hero } from '../../../types/store';
+]import type { Hero } from '../../../types/store';
 
 export function validateHeroData(data: Partial<Hero>): string[] {
   const errors: string[] = [];

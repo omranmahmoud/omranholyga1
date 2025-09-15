@@ -1,7 +1,7 @@
 // src/components/Admin/Shipping/ShippingRateModal/index.tsx
 import React from 'react';
 import { X } from 'lucide-react';
-import type { ShippingRate, ShippingZone } from '../../../../types/shipping';
+import { type ShippingRate, type ShippingZone } from '../../../../services/shippingService';
 import { RateBasicInfo } from './RateBasicInfo';
 import { RatePricing } from './RatePricing';
 import { RateDeliveryTime } from './RateDeliveryTime';

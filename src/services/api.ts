@@ -1,4 +1,4 @@
-import axios, { AxiosInstance } from 'axios';
+import axios from 'axios';
 import { toast } from 'react-hot-toast';
 
 // Resolve base URL (prefer runtime injected, then Vite env, fallback '/api')
@@ -89,20 +89,13 @@ const withRetry = async (request: () => Promise<any>, retries = 3) => {
   }
 };
 
-interface EnhancedApi extends AxiosInstance {
-  getWithRetry: (url: string, config?: any) => Promise<any>;
-  postWithRetry: (url: string, data?: any, config?: any) => Promise<any>;
-  putWithRetry: (url: string, data?: any, config?: any) => Promise<any>;
-  patchWithRetry: (url: string, data?: any, config?: any) => Promise<any>;
-  deleteWithRetry: (url: string, config?: any) => Promise<any>;
-}
-
-const enhancedApi: EnhancedApi = Object.assign(api, {
+const enhancedApi = {
+  ...api,
   getWithRetry: (url: string, config?: any) => withRetry(() => api.get(url, config)),
   postWithRetry: (url: string, data?: any, config?: any) => withRetry(() => api.post(url, data, config)),
   putWithRetry: (url: string, data?: any, config?: any) => withRetry(() => api.put(url, data, config)),
   patchWithRetry: (url: string, data?: any, config?: any) => withRetry(() => api.patch(url, data, config)),
   deleteWithRetry: (url: string, config?: any) => withRetry(() => api.delete(url, config))
-});
+};
 
 export default enhancedApi;

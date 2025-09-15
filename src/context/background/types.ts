@@ -1,5 +1,4 @@
-// background types
-// background types
+
 export interface Background {
   _id: string;
   name: string;
@@ -18,3 +17,4 @@ export interface BackgroundContextType {
 export interface BackgroundProviderProps {
   children: React.ReactNode;
 }
+```

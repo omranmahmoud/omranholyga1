@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import { ShippingRateFormData } from './types';
 import { validateShippingRateForm } from './validation';
 import { toast } from 'react-hot-toast';
-import type { ShippingRate, ShippingZone } from '../../../../types/shipping';
 
 const initialFormData: ShippingRateFormData = {
   name: '',

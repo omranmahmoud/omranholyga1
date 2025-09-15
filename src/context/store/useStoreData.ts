@@ -58,7 +58,7 @@ export function useStoreData({
       console.error('Error fetching store data:', error);
       
       if (retryCount < maxRetries) {
-  setRetryCount(retryCount + 1);
+        setRetryCount(prev => prev + 1);
         const delay = retryDelay * Math.pow(2, retryCount);
         setTimeout(() => fetchData(true), delay);
       } else {
@@ -79,3 +79,4 @@ export function useStoreData({
 
   return { state, fetchData };
 }
+]

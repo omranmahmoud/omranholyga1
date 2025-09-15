@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Upload } from 'lucide-react';
+]import React, { useState } from 'react';
+import { Upload, X } from 'lucide-react';
 import { uploadToCloudinary } from '../../../services/cloudinary';
 import { toast } from 'react-hot-toast';
 

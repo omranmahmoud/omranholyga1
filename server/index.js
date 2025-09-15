@@ -114,13 +114,12 @@ function parseDevice(ua = '') {
 }
 
 function shouldRedirectDevice({ isTablet, isMobilePhone }) {
-  const policy = (process.env.MOBILE_WEB_TABLET_POLICY || 'desktop').toLowerCase(); // 'desktop' | 'mobile' | 'always' (alias of mobile) | 'ignore'
+  // Change default to redirect tablets too unless explicitly overridden
+  const policy = (process.env.MOBILE_WEB_TABLET_POLICY || 'mobile').toLowerCase(); // 'mobile' | 'always' | 'desktop' | 'ignore'
   if (isMobilePhone) return true;
   if (isTablet) {
-    if (policy === 'mobile' || policy === 'always') return true;
-    if (policy === 'ignore') return false; // treat like desktop but count
-    // default 'desktop' => no redirect
-    return false;
+    if (policy === 'ignore' || policy === 'desktop') return false; // opt-out explicitly
+    return true; // default redirect tablets
   }
   return false;
 }

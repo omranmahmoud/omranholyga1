@@ -77,3 +77,4 @@ export interface StoreActions {
 }
 
 export type StoreContextType = StoreState & StoreActions;
+```

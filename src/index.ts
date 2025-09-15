@@ -89,7 +89,7 @@ export { uploadToCloudinary } from './services/cloudinary';
 
 // Types
 export type { Hero, StoreSettings, Announcement } from './types/store';
-export type { ShippingZone, ShippingRate, ShippingCalculation } from './types/shipping';
+export type { ShippingZone, ShippingRate } from './types/shipping';
 export type { CurrencyCode, CurrencyDetails } from './types/currency';
 export type { 
   DeliveryCompany, 

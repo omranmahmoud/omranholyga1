@@ -8,6 +8,25 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- Mobile redirect (client-side fallback) -->
+    <script>
+    (function(){
+        try {
+          // Only run on initial landing, not inside the mobile build path
+          if (location.pathname.startsWith('/m')) return;
+          // Respect explicit desktop preference cookie (set by server endpoints)
+          if (document.cookie.split(';').some(c=>c.trim().startsWith('forceDesktop=1'))) return;
+          var ua = navigator.userAgent.toLowerCase();
+          var isTablet = /(ipad|tablet|kindle|silk|playbook|sm-t|tab)/.test(ua) || (/(android)/.test(ua) && !/mobile/.test(ua));
+          var isMobilePhone = !isTablet && /(iphone|ipod|android.*mobile|blackberry|bb10|opera mini|iemobile|windows phone|mobile)/.test(ua);
+      // Updated: redirect tablets as well (mirrors server default change)
+      if (isMobilePhone || isTablet) {
+            // Avoid redirect loops
+            window.location.replace('/m');
+          }
+        } catch(e) { /* silent */ }
+      })();
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

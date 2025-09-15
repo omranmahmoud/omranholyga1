@@ -2,8 +2,7 @@ import api from './api';
 import { toast } from 'react-hot-toast';
 import type { ShippingZone, ShippingRate, ShippingCalculation } from '../types/shipping';
 
-// Public service exposing CRUD + calculation helpers for shipping.
-export class ShippingService {
+class ShippingService {
   // Fetch all shipping zones
   async getZones(): Promise<ShippingZone[]> {
     try {
@@ -129,8 +128,5 @@ export class ShippingService {
   }
 }
 
-// Singleton instance (preferred import for consumers)
+// Export a singleton instance of the shipping service
 export const shippingService = new ShippingService();
-
-// Re-export core types for convenience so callers can import from services/shippingService
-export type { ShippingZone, ShippingRate, ShippingCalculation } from '../types/shipping';

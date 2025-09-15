@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Gift, Send } from 'lucide-react';
+import { Gift, Mail, Send } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { useCurrency } from '../../context/CurrencyContext';
 import { formatPrice } from '../../utils/currency';
@@ -49,7 +49,7 @@ export function GiftCardPurchase() {
 
     setLoading(true);
     try {
-  await api.postWithRetry('/gift-cards/purchase', {
+      const response = await api.post('/gift-cards/purchase', {
         amount,
         recipientName: formData.recipientName,
         recipientEmail: formData.recipientEmail,
@@ -155,6 +155,7 @@ export function GiftCardPurchase() {
             </div>
           </div>
           <div>
+            <label className="block text-sm font-medium text ```tsx
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Personal Message (Optional)
             </label>

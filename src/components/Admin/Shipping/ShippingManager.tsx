@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Plus } from 'lucide-react';
 import { ShippingZoneList } from './ShippingZoneList';
 import { ShippingZoneModal } from './ShippingZoneModal';
 import { ShippingRateModal } from './ShippingRateModal';
 import { useShipping } from '../../../hooks/useShipping';
-import { shippingService } from '../../../services/shippingService';
-import type { ShippingZone, ShippingRate } from '../../../types/shipping';
+import { type ShippingZone, type ShippingRate, shippingService } from '../../../services/shippingService';
+import { toast } from 'react-hot-toast';
 
 export function ShippingManager() {
   const { zones, rates, loading } = useShipping();

@@ -1,5 +1,3 @@
-// formatting helpers
-// formatting helpers
 export function formatCurrency(amount: number): string {
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -19,4 +17,4 @@ export function formatDeliveryTime(min: number, max: number): string {
   }
   return `${min}-${max} business days`;
 }
-// end formatting helpers
+```
