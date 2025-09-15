@@ -4,6 +4,10 @@
   publish = "dist"
   # Environment vars (VITE_API_BASE, EXPO_PUBLIC_API_URL, MOBILE_WEB_TABLET_POLICY) set in Netlify UI.
 
+# Force a stable Node version (Rollup optional native package bug appears on Node 22 build image)
+[build.environment]
+  NODE_VERSION = "20"
+
 [[edge_functions]]
   function = "device-redirect"
   path = "/*"
