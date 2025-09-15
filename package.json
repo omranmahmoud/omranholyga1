@@ -14,7 +14,7 @@
     "server": "node index.js",
     "start": "node server/index.js",
   "gen:vapid": "node server/scripts/genVapid.js",
-  "mobile:deps": "cd mobile/mobile-app && npm ci --no-audit --no-fund",
+  "mobile:deps": "cd mobile/mobile-app && npm install --no-audit --no-fund --legacy-peer-deps",
   "mobile:web": "cd mobile/mobile-app && npx expo export -p web",
   "mobile:web:clean": "powershell -Command \"Remove-Item -Recurse -Force mobile/mobile-app/dist -ErrorAction SilentlyContinue\"",
   "mobile:web:build": "npm run mobile:web && echo Mobile web build complete",
