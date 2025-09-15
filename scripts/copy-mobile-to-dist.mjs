@@ -93,3 +93,20 @@ if (apiBase) {
 } else {
   console.log('[build:netlify] No API base env (VITE_API_BASE/API_BASE/EXPO_PUBLIC_API_URL) provided; skipping injection');
 }
+
+// Always rewrite absolute Expo asset paths (src="/_expo/...") to be relative so they resolve under /m
+try {
+  const indexFile = path.join(target, 'index.html');
+  if (fs.existsSync(indexFile)) {
+    let html = fs.readFileSync(indexFile, 'utf8');
+    const before = html;
+    // Replace src="/_expo/... and href="/_expo/...
+    html = html.replace(/(src|href)="\/_expo\//g, '$1="./_expo/');
+    if (html !== before) {
+      fs.writeFileSync(indexFile, html, 'utf8');
+      console.log('[build:netlify] Rewrote absolute /_expo asset paths to relative ./_expo/');
+    }
+  }
+} catch (e) {
+  console.warn('[build:netlify] Failed rewriting Expo asset paths:', e.message);
+}
