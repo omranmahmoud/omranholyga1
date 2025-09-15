@@ -1,0 +1,63 @@
+{
+  "expo": {
+    "owner": "omranholyga",
+    "name": "mobile-app",
+    "slug": "mobile-app",
+    "scheme": "mobileapp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "bundleIdentifier": "com.yourcompany.mobileapp",
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "We use your location to auto-detect your shipping country.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Location is used to auto-fill your shipping country and improve checkout speed."
+      }
+    },
+    "android": {
+      "package": "com.yourcompany.mobileapp",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-secure-store",
+      "expo-localization",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow the app to access your location to auto-fill your shipping country."
+        }
+      ]
+    ],
+    "entryPoint": "./index.js",
+    "extra": {
+  "EXPO_PUBLIC_API_URL": "https://omraneva.onrender.com",
+      "EXPO_PUBLIC_GOOGLE_CLIENT_ID": "84807617271-404793a4pmkeco7mmksrqbpbpn7qn11s.apps.googleusercontent.com",
+      "EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID": "84807617271-3mlqsg12nin3ke9frqrn1i9cs2olm4g4.apps.googleusercontent.com",
+      "EXPO_PUBLIC_GOOGLE_ANDROID_CLIENT_ID": "955901517456-au59djrtd5eqei1t76gn4ej61o60dcj5.apps.googleusercontent.com",
+  "EXPO_PUBLIC_FACEBOOK_APP_ID": "REPLACE_WITH_FACEBOOK_APP_ID",
+      "eas": {
+        "projectId": "18021548-ee6a-4f9c-980b-741bb7e4626e"
+      }
+    }
+  }
+}
