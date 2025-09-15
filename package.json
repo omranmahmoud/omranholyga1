@@ -14,12 +14,13 @@
     "server": "node index.js",
     "start": "node server/index.js",
   "gen:vapid": "node server/scripts/genVapid.js",
+  "mobile:deps": "cd mobile/mobile-app && npm ci --no-audit --no-fund",
   "mobile:web": "cd mobile/mobile-app && npx expo export -p web",
   "mobile:web:clean": "powershell -Command \"Remove-Item -Recurse -Force mobile/mobile-app/dist -ErrorAction SilentlyContinue\"",
   "mobile:web:build": "npm run mobile:web && echo Mobile web build complete",
   "mobile:dev": "cd mobile/mobile-app && npx expo start",
   "mobile": "npm run mobile:dev",
-  "build:netlify": "npm run build && npm run mobile:web && node scripts/copy-mobile-to-dist.mjs"
+  "build:netlify": "npm run build && npm run mobile:deps && npm run mobile:web && node scripts/copy-mobile-to-dist.mjs"
   },
   "dependencies": {
     "@hello-pangea/dnd": "^16.5.0",
